@@ -8,7 +8,7 @@ public class MyMainStart {
 	
 	public static void main(String[] args) throws IOException {
 		var reader = new BufferedReader(new InputStreamReader(System.in));
-		String[] startComd = (reader.readLine()).split(" "); //указывать иходной параметр нужно через пробел!!!
+		String[] startComd = (reader.readLine()).split(" "); //СѓРєР°Р·С‹РІР°С‚СЊ РёС…РѕРґРЅРѕР№ РїР°СЂР°РјРµС‚СЂ РЅСѓР¶РЅРѕ С‡РµСЂРµР· РїСЂРѕР±РµР»!!!
 		if(startComd[0].equals("-")) {
 			sentResult(startComd[1], getResult((reader.readLine()).split(" ")));
 		}
@@ -17,7 +17,7 @@ public class MyMainStart {
 				sentResult(startComd[1], getResult((new FileUtils().readFile(startComd[0])).split(" ")));
 			}
 			catch(Exception e) {
-				System.out.println("ERROR: Не верно указана стартовая команда!");
+				System.out.println("ERROR: РќРµ РІРµСЂРЅРѕ СѓРєР°Р·Р°РЅР° СЃС‚Р°СЂС‚РѕРІР°СЏ РєРѕРјР°РЅРґР°.");
 			}
 		}
 		reader.close();
@@ -28,18 +28,18 @@ public class MyMainStart {
 		if(checkComand(param[0])) {
 			switch (param[0]) {
 	        case  ("sum"):
-	        	result = new Сalculations().sum(convert(param));
+	        	result = new РЎalculations().sum(convert(param));
 	            break;
 	        case ("mult"):
-	        	result = new Сalculations().mult(convert(param));
+	        	result = new РЎalculations().mult(convert(param));
 	            break;
 	        case ("multsum"):
-	        	result = new Сalculations().multsum(convert(param));
+	        	result = new РЎalculations().multsum(convert(param));
 	            break;
 			}
 		}
 		else {
-			System.out.println("ERROR: Не верно указана команда арифметической операции.\nКорректные команды: sum, mult, multsum.");
+			System.out.println("ERROR: РќРµ РІРµСЂРЅРѕ СѓРєР°Р·Р°РЅР° РєРѕРјР°РЅРґР° Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё.\nРљРѕСЂСЂРµРєС‚РЅС‹Рµ РєРѕРјР°РЅРґС‹: sum, mult, multsum.");
 			System.exit(0);
 		}
 		return result;
@@ -52,7 +52,7 @@ public class MyMainStart {
         		numArr[i] = Integer.parseInt(strArr[i+1]);
         	}
         	catch(NumberFormatException e){
-        		System.out.println("ERROR: Указаны не корректные числа.");
+        		System.out.println("ERROR: РЈРєР°Р·Р°РЅС‹ РЅРµ РєРѕСЂСЂРµРєС‚РЅС‹Рµ С‡РёСЃР»Р°.");
         		System.exit(0);
         	}
         }

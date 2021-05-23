@@ -2,7 +2,7 @@ package base;
 
 import java.util.stream.IntStream;
 
-public class Ñalculations {
+public class Ð¡alculations {
 	
 	public int sum(int... i) {
 		return IntStream.of(i).sum();

@@ -13,7 +13,7 @@ public class FileUtils {
 		try {
 			result = Files.lines(Paths.get(name)).findFirst();
 		} catch (IOException e) {
-			System.out.println("ERROR: Не верно указанно имя входного файла");
+			System.out.println("ERROR: РќРµ РІРµСЂРЅРѕ СѓРєР°Р·Р°РЅРЅРѕ РёРјСЏ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°");
 			//e.printStackTrace();
 		}
 		return result.get();

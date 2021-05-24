@@ -27,7 +27,6 @@ public class FileUtils {
 		try(FileWriter writer = new FileWriter(path, false)){ 
 			writer.write(result); 
 			writer.flush();
-			writer.close();
 			}
 		catch(IOException ex){
 			System.out.println(ex.getMessage());
